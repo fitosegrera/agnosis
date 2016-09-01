@@ -109,7 +109,7 @@ if __name__ == "__main__":
 		print "processing image", i+1
 		tags = processClarifai(path + str(i+1) +  '.jpg')
 		print "geting data from google..."
-		print "--------------------------"
+
 		lines = ""
 		for tag in tags:
 			action = getAction()
@@ -125,3 +125,5 @@ if __name__ == "__main__":
 		with open(outPath + str(i+1) + '.txt', 'w') as outfile:
 			json.dump(output, outfile, indent=4, sort_keys=True)
 			print "DATA SAVED!\n"
+
+		print "--------------------------"

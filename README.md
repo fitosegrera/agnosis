@@ -1,6 +1,6 @@
-# agnosis
-###Author: fito_segrera
-###2016
+# agnosis: the lost memories
+#### Author: fito_segrera
+#### 2016
 
 ###This repository contains the 3 main applications which form the system AGNOSIS: The lost memories.
 
