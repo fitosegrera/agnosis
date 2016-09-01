@@ -8,6 +8,8 @@ import json
 
 path = sys.argv[1]
 print "path to process:", path
+outPath = "output/" + sys.argv[2]
+print "data will be saved at:", outPath
 
 #Process image with clarifai
 def processClarifai(imgUrl):
@@ -101,11 +103,11 @@ def getJsonURL(u, poem):
 #Main function
 if __name__ == "__main__":
 
-	totalMemories = int(sys.argv[2])
+	totalMemories = int(sys.argv[3])
 	
 	for i in range(totalMemories):
 		print "processing image", i+1
-		tags = processClarifai('http://fii.to/agnosis_memories/' + path + str(i+1) +  '.jpg')
+		tags = processClarifai(path + str(i+1) +  '.jpg')
 		print "geting data from google..."
 		print "--------------------------"
 		lines = ""
@@ -118,8 +120,8 @@ if __name__ == "__main__":
 			resultPhrase = parseData(search, tag)
 			lines += resultPhrase + ', '
 
-		output = getJsonURL("http://fii.to/agnosis_memories/shanghai-28-08-16/1/memory_" + str(i+1) + ".txt", lines)
+		output = getJsonURL(path + str(i+1) + ".txt", lines)
 
-		with open('output/' + path + str(i+1) + '.txt', 'w') as outfile:
+		with open(outPath + str(i+1) + '.txt', 'w') as outfile:
 			json.dump(output, outfile, indent=4, sort_keys=True)
 			print "DATA SAVED!\n"
