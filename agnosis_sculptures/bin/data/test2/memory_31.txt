@@ -1,0 +1,22 @@
+{
+  "attention": 38,
+  "gps": {
+    "lon": 121.4489517211914,
+    "lat": 31.221431732177734,
+    "alt": 0
+  },
+  "accelerometer": {
+    "z": -0.4692635238170624,
+    "x": 1.522712230682373,
+    "y": 9.241618156433105
+  },
+  "image_path": "//sdcard//agnosis//agnosis_Fri Aug 26 10:31:16 GMT+08:00 2016",
+  "timestamp": "Fri Aug 26 10:41:04 GMT+08:00 2016",
+  "raw": 0,
+  "orientation": {
+    "z": 9.265625,
+    "x": 21.5,
+    "y": -99.703125
+  },
+  "meditation": 29
+}
